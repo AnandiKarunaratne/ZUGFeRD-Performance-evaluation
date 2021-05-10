@@ -1,6 +1,6 @@
 package pdfa3eval;
 
-public class PDFA33Factory {
+public class PDFA3Factory {
 	
 	enum Type {
 		  MUSTANG,
