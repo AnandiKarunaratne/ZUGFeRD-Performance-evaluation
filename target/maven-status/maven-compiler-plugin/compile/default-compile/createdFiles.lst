@@ -1,0 +1,11 @@
+META-INF/CompilerHints
+pdfa3eval/PDFA3Session.class
+META-INF/BenchmarkList
+pdfa3eval/jmh_generated/BenchmarkTesting_jmhType_B2.class
+pdfa3eval/Main.class
+pdfa3eval/jmh_generated/BenchmarkTesting_test_jmhTest.class
+pdfa3eval/MustangPDFA3Session.class
+pdfa3eval/BenchmarkTesting.class
+pdfa3eval/jmh_generated/BenchmarkTesting_jmhType.class
+pdfa3eval/jmh_generated/BenchmarkTesting_jmhType_B3.class
+pdfa3eval/jmh_generated/BenchmarkTesting_jmhType_B1.class
