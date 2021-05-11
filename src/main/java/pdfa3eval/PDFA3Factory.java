@@ -7,19 +7,13 @@ public class PDFA3Factory {
 		  FOP
 	}
 
-	public static void getPDFSession(Type type) {
+	public static PDFA3Session getPDFSession(Type type) {
 		if (type == Type.MUSTANG) { // for Mustang
-			MustangPDFA3Session testMustangPDFA3Session = new MustangPDFA3Session();
-			testMustangPDFA3Session.addAttachment("a1_file.pdf", "zugferd-invoice.xml");
-			testMustangPDFA3Session.generate();
+			return new MustangPDFA3Session();
 		}
 		else { // for FOP
-			
+			return null;
 		}
-	}
-	
-	public static void main(String[] args) {
-		getPDFSession(Type.MUSTANG);
 	}
 
 }

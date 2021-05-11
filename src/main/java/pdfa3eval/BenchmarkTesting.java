@@ -9,28 +9,28 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
+import pdfa3eval.PDFA3Factory.Type;
+
 public class BenchmarkTesting {
 	
 	@Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+	@BenchmarkMode(Mode.AverageTime)
 	public void testMustang() {
-		MustangPDFA3Session testMustangPDFA3Session = new MustangPDFA3Session();
-		testMustangPDFA3Session.addAttachment("a1_file.pdf", "zugferd-invoice.xml");
-		testMustangPDFA3Session.generate();
+		PDFA3Factory.getPDFSession(Type.MUSTANG);
     }
 	
-	@Benchmark
-    @BenchmarkMode(Mode.AverageTime)
-	public void testFOP() {
-	
-	}
+//	@Benchmark
+//    @BenchmarkMode(Mode.AverageTime)
+//	public void testFOP() {
+//	
+//	}
 
 
 	public static void main(String[] args) throws Exception {
 		Options opt = new OptionsBuilder()
                 .include(BenchmarkTesting.class.getSimpleName())
                 .warmupIterations(10)
-                .measurementIterations(10000)
+                .measurementIterations(1)
                 .forks(5)
                 .timeUnit(TimeUnit.MILLISECONDS)
                 .build();
