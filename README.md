@@ -9,6 +9,7 @@ This project is a performance evaluation of PDF/A-3 file generation using Mustan
 ### 1. To simply generate a PDF/A-3 file
 1. Clone the repository
 2. Run src/main/java/pdfa3eval/Main.java
+3. When this is successfully done generatedA3.pdf file will be generated in the root directory.
 
 ### 2. For performance testing with JMH
 1. Clone the repository.
