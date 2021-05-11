@@ -16,7 +16,9 @@ public class BenchmarkTesting {
 	@Benchmark
 	@BenchmarkMode(Mode.AverageTime)
 	public void testMustang() {
-		PDFA3Factory.getPDFSession(Type.MUSTANG);
+		PDFA3Session testMustangPDFA3Session = PDFA3Factory.getPDFSession(Type.MUSTANG);
+		testMustangPDFA3Session.addAttachment("a1_file.pdf", "zugferd-invoice.xml");
+		testMustangPDFA3Session.generate();
     }
 	
 //	@Benchmark
@@ -29,9 +31,9 @@ public class BenchmarkTesting {
 	public static void main(String[] args) throws Exception {
 		Options opt = new OptionsBuilder()
                 .include(BenchmarkTesting.class.getSimpleName())
-                .warmupIterations(10)
+                .warmupIterations(1)
                 .measurementIterations(1)
-                .forks(5)
+                .forks(1)
                 .timeUnit(TimeUnit.MILLISECONDS)
                 .build();
 
