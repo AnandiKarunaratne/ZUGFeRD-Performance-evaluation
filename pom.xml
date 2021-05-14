@@ -26,6 +26,11 @@
 	    <artifactId>jmh-generator-annprocess</artifactId>
 	    <version>1.28</version>
 	</dependency>  
+	<dependency>
+	  	<groupId>org.mustangproject</groupId>
+	  	<artifactId>validator</artifactId>
+	  	<version>2.1.1</version>
+	</dependency>
   </dependencies>
   
   <build>

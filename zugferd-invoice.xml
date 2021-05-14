@@ -115,7 +115,7 @@
       <ram:SellerTradeParty> 
         <ram:Name>Bei Spiel GmbH</ram:Name>  
         <ram:SpecifiedLegalOrganization> 
-          <ram:ID schemeID="9930">DE136695976</ram:ID>  
+          <ram:ID>DE136695976</ram:ID>  
           <ram:TradingBusinessName>Bei Spiel GmbH</ram:TradingBusinessName> 
         </ram:SpecifiedLegalOrganization>
         <ram:DefinedTradeContact> 

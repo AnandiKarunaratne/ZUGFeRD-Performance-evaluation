@@ -21,11 +21,11 @@ public class BenchmarkTesting {
 		testMustangPDFA3Session.generate();
     }
 	
-//	@Benchmark
-//    @BenchmarkMode(Mode.AverageTime)
-//	public void testFOP() {
-//	
-//	}
+	@Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+	public void testFOP() {
+		
+	}
 
 
 	public static void main(String[] args) throws Exception {

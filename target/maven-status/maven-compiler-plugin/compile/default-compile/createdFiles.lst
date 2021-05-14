@@ -1,6 +1,7 @@
 META-INF/CompilerHints
 pdfa3eval/PDFA3Factory$Type.class
 pdfa3eval/Main.class
+pdfa3eval/jmh_generated/BenchmarkTesting_testFOP_jmhTest.class
 pdfa3eval/MustangPDFA3Session.class
 pdfa3eval/jmh_generated/BenchmarkTesting_jmhType_B3.class
 pdfa3eval/PDFA3Session.class
