@@ -14,3 +14,7 @@ This project is a performance evaluation of PDF/A-3 file generation using Mustan
 ### 2. For performance testing with JMH
 1. Clone the repository.
 2. Run src/main/java/pdfa3eval/BenchmarkTesting.java
+
+### 3. To validate the generated PDF/A-3 file
+1. Clone the repository.
+2. Run src/test/java/PdfValidator.java
