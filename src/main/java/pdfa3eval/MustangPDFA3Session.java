@@ -7,21 +7,28 @@ import java.nio.file.Paths;
 
 import org.mustangproject.ZUGFeRD.IZUGFeRDExporter;
 import org.mustangproject.ZUGFeRD.ZUGFeRDExporterFromA1;
+import org.xml.sax.SAXException;
 
 public class MustangPDFA3Session implements PDFA3Session {
 	
 	IZUGFeRDExporter ze;
-	
-	public void addAttachment(String pdfA1FilePath, String xmlFilePath) {
+	private String PDF_A1_FILE, XML_FILE;
+	private final String OUTPUT_FILE = "mustangA3File.pdf";
+
+	public void addAttachment() throws IOException, SAXException {
+
+		PDF_A1_FILE = "Library/Attachments/mustangA1File.pdf";
+		XML_FILE = "Library/Attachments/mustangXmlFile.xml";
+
 		try {
 			// get pdf a-1 file
 			ze = new ZUGFeRDExporterFromA1().setProducer("My Application")
 				.setCreator(System.getProperty("user.name"))
-			    .load(pdfA1FilePath);
+			    .load(PDF_A1_FILE);
 			
 			// get pdf xml file
 			String ZUGFeRDXML = new String(Files.readAllBytes
-					(Paths.get(xmlFilePath)), StandardCharsets.UTF_8);
+					(Paths.get(XML_FILE)), StandardCharsets.UTF_8);
 			ze.setXML(ZUGFeRDXML.getBytes());
 			
 		} catch (IOException e){
@@ -31,7 +38,7 @@ public class MustangPDFA3Session implements PDFA3Session {
 	
 	public void generate() {
 		try {
-			ze.export("./generatedA3.pdf");
+			ze.export(OUTPUT_FILE);
 		} catch (IOException e){
 			e.printStackTrace();
 		}

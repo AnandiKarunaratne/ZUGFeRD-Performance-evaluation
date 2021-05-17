@@ -8,12 +8,13 @@ import java.io.IOException;
 public class Main {
 
 	public static void main(String[] args) throws IOException, SAXException {
-		PDFA3Session testMustangPDFA3Session = PDFA3Factory.getPDFSession(Type.MUSTANG);
-		testMustangPDFA3Session.addAttachment("a1_file.pdf", "zugferd-invoice.xml");
-		testMustangPDFA3Session.generate();
+		PDFA3Session mustangPDFA3Session = PDFA3Factory.getPDFSession(Type.MUSTANG);
+		mustangPDFA3Session.addAttachment();
+		mustangPDFA3Session.generate();
 
 		PDFA3Session fopPDFA3Session = PDFA3Factory.getPDFSession(Type.FOP);
-		fopPDFA3Session.addAttachment("requiredFopA1File.pdf", null);
+		fopPDFA3Session.addAttachment();
+		fopPDFA3Session.generate();
 	}
 
 }

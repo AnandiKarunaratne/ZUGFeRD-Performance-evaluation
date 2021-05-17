@@ -18,18 +18,7 @@
   <!-- Uses renderer mime type for renderers -->
   <renderers>
     <renderer mime="application/pdf">
-      <filterList>
-        <!-- provides compression using zlib flate (default is on) -->
-        <value>flate</value>
-  
-        <!-- encodes binary data into printable ascii characters (default off)
-             This provides about a 4:5 expansion of data size -->
-        <!-- <value>ascii-85</value> -->
-  
-        <!-- encodes binary data with hex representation (default off)
-             This filter is not recommended as it doubles the data size -->
-        <!-- <value>ascii-hex</value> -->
-      </filterList>
+
 
       <fonts>
         <!-- embedded fonts -->

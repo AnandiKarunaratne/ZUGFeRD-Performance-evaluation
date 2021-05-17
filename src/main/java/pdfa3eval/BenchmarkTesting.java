@@ -19,14 +19,16 @@ public class BenchmarkTesting {
 	@BenchmarkMode(Mode.AverageTime)
 	public void testMustang() throws IOException, SAXException {
 		PDFA3Session testMustangPDFA3Session = PDFA3Factory.getPDFSession(Type.MUSTANG);
-		testMustangPDFA3Session.addAttachment("a1_file.pdf", "zugferd-invoice.xml");
+		testMustangPDFA3Session.addAttachment();
 		testMustangPDFA3Session.generate();
     }
 	
 	@Benchmark
     @BenchmarkMode(Mode.AverageTime)
-	public void testFOP() {
-		
+	public void testFOP() throws IOException, SAXException {
+		PDFA3Session fopPDFA3Session = PDFA3Factory.getPDFSession(Type.FOP);
+		fopPDFA3Session.addAttachment();
+		fopPDFA3Session.generate();
 	}
 
 
