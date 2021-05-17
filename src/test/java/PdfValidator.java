@@ -3,7 +3,7 @@ import org.mustangproject.validator.ZUGFeRDValidator;
 public class PdfValidator {
 	
 	public static void mustangPdfVal(String filePath) {
-		ZUGFeRDValidator zfv=new ZUGFeRDValidator();
+		ZUGFeRDValidator zfv = new ZUGFeRDValidator();
 		System.out.println(zfv.validate(filePath));
 		
 	}

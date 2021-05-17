@@ -11,7 +11,11 @@ public class PDFA3Factory {
 		if (type == Type.MUSTANG) { // for Mustang
 			return new MustangPDFA3Session();
 		}
-		else { // for FOP
+		else if (type == Type.FOP){ // for FOP
+			return new FopPDFA3Session();
+		}
+		else {
+			System.out.println("Invalid type");
 			return null;
 		}
 	}
