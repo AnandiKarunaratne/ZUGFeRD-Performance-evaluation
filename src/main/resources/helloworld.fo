@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:fox="http://xmlgraphics.apache.org/fop/extensions" xmlns:pdf="http://xmlgraphics.apache.org/fop/extensions/pdf" font-family="Arial" font-weight="normal" font-style="normal">
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:fox="http://xmlgraphics.apache.org/fop/extensions" xmlns:pdf="http://xmlgraphics.apache.org/fop/extensions/pdf" xmlns:fx="javafx:com.sun.javafx.tools.ant" font-family="Arial" font-weight="normal" font-style="normal">
   <fo:layout-master-set>
     <fo:simple-page-master master-name="simpleA4" page-height="29.7cm" page-width="21cm" margin-top="2cm" margin-bottom="2cm" margin-left="2cm" margin-right="2cm">
       <fo:region-body/>
@@ -8,6 +8,24 @@
   </fo:layout-master-set>
 
   <fo:declarations>
+    <x:xmpmeta xmlns:x="adobe:ns:meta/">
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+          <rdf:Description rdf:about=""
+              xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <!-- Dublin Core properties go here -->
+            <dc:creator>anandikarunaratne</dc:creator>
+            <fx:conformancelevel>EN 16931</fx:conformancelevel>
+            <fx:documentfilename>factur-x.xml</fx:documentfilename>
+            <fx:documenttype>INVOICE</fx:documenttype>
+            <fx:version>1.0</fx:version>
+          </rdf:Description>
+          <rdf:Description rdf:about=""
+              xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+            <!-- XMP properties go here -->
+            <xmp:CreatorTool>Tool used to make the PDF</xmp:CreatorTool>
+          </rdf:Description>
+        </rdf:RDF>
+      </x:xmpmeta>
     <pdf:embedded-file filename="logo.jpg" src="url(file:///home/anandikarunaratne/Work/performanceEval/Library/Attachments/logo.jpg)" description="Java Logo"/>
     <pdf:embedded-file src="url(file:///home/anandikarunaratne/Work/performanceEval/Library/Attachments/invoice.xml)"/>
   </fo:declarations>

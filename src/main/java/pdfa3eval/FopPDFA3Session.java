@@ -54,7 +54,7 @@ public class FopPDFA3Session implements PDFA3Session {
 			
 		FOUserAgent foUserAgent = fopFactory.newFOUserAgent();
 		foUserAgent.setAccessibility(true);
-		foUserAgent.getRendererOptions().put("pdf-a-mode", "PDF/A-3b");
+		foUserAgent.getRendererOptions().put("pdf-a-mode", "PDF/A-3u");
 		foUserAgent.getRendererOptions().put("version", "1.4");
 		foUserAgent.setAuthor("Author 1");
 			
