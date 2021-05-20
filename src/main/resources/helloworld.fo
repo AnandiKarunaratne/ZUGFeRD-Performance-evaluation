@@ -13,10 +13,10 @@
           <rdf:Description rdf:about=""
               xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#">
             <!-- Dublin Core properties go here -->
-            <fx:conformancelevel>EN 16931</fx:conformancelevel>
-            <fx:documentfilename>factur-x.xml</fx:documentfilename>
-            <fx:documenttype>INVOICE</fx:documenttype>
-            <fx:version>1.0</fx:version>
+            <fx:ConformanceLevel>BASIC</fx:ConformanceLevel>
+            <fx:DocumentFileName>factur-x.xml</fx:DocumentFileName>
+            <fx:DocumentType>INVOICE</fx:DocumentType>
+            <fx:Version>1.0</fx:Version>
           </rdf:Description>
           <rdf:Description rdf:about=""
               xmlns:xmp="http://ns.adobe.com/xap/1.0/">
@@ -26,7 +26,7 @@
         </rdf:RDF>
       </x:xmpmeta>
     <pdf:embedded-file filename="logo.jpg" src="url(file:///home/anandikarunaratne/Work/performanceEval/Library/Attachments/logo.jpg)" description="Java Logo"/>
-    <pdf:embedded-file src="url(file:///home/anandikarunaratne/Work/performanceEval/Library/Attachments/invoice.xml)"/>
+    <pdf:embedded-file src="url(file:///home/anandikarunaratne/Work/performanceEval/Library/Attachments/mustangXmlFile.xml)"/>
   </fo:declarations>
 
   <fo:page-sequence master-reference="simpleA4">

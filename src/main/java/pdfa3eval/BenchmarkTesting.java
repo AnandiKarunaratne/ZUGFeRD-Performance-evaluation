@@ -9,16 +9,14 @@ import org.openjdk.jmh.annotations.Mode;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
-
 import org.xml.sax.SAXException;
-import pdfa3eval.PDFA3Factory.Type;
 
 public class BenchmarkTesting {
 	
 	@Benchmark
 	@BenchmarkMode(Mode.AverageTime)
 	public void testMustang() throws IOException, SAXException {
-		PDFA3Session testMustangPDFA3Session = PDFA3Factory.getPDFSession(Type.MUSTANG);
+		PDFA3Session testMustangPDFA3Session = PDFA3Factory.getPDFSession(PDFA3Factory.Type.MUSTANG);
 		testMustangPDFA3Session.addAttachment();
 		testMustangPDFA3Session.generate();
     }
@@ -26,7 +24,7 @@ public class BenchmarkTesting {
 	@Benchmark
     @BenchmarkMode(Mode.AverageTime)
 	public void testFOP() throws IOException, SAXException {
-		PDFA3Session fopPDFA3Session = PDFA3Factory.getPDFSession(Type.FOP);
+		PDFA3Session fopPDFA3Session = PDFA3Factory.getPDFSession(PDFA3Factory.Type.FOP);
 		fopPDFA3Session.addAttachment();
 		fopPDFA3Session.generate();
 	}
