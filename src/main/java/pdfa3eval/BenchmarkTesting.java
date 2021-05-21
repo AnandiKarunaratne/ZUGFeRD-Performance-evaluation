@@ -1,8 +1,5 @@
 package pdfa3eval;
 
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Mode;
@@ -10,6 +7,9 @@ import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 import org.xml.sax.SAXException;
+
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class BenchmarkTesting {
 	
@@ -33,7 +33,7 @@ public class BenchmarkTesting {
 	public static void main(String[] args) throws Exception {
 		Options opt = new OptionsBuilder()
                 .include(BenchmarkTesting.class.getSimpleName())
-                .warmupIterations(1)
+                .warmupIterations(5)
                 .measurementIterations(1)
                 .forks(1)
                 .timeUnit(TimeUnit.MILLISECONDS)

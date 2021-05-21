@@ -2,7 +2,7 @@ package pdfa3eval;
 
 public class PDFA3Factory {
 	
-	enum Type {
+	public enum Type {
 		  MUSTANG,
 		  FOP
 	}

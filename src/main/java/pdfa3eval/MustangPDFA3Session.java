@@ -1,13 +1,13 @@
 package pdfa3eval;
 
+import org.mustangproject.ZUGFeRD.IZUGFeRDExporter;
+import org.mustangproject.ZUGFeRD.ZUGFeRDExporterFromA1;
+import org.xml.sax.SAXException;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
-import org.mustangproject.ZUGFeRD.IZUGFeRDExporter;
-import org.mustangproject.ZUGFeRD.ZUGFeRDExporterFromA1;
-import org.xml.sax.SAXException;
 
 public class MustangPDFA3Session implements PDFA3Session {
 	
@@ -18,7 +18,7 @@ public class MustangPDFA3Session implements PDFA3Session {
 	public void addAttachment() throws IOException, SAXException {
 
 		PDF_A1_FILE = "Library/Attachments/mustangA1File.pdf";
-		XML_FILE = "Library/Attachments/mustangXmlFile.xml";
+		XML_FILE = "Library/Attachments/factur-x.xml";
 
 		try {
 			// get pdf a-1 file

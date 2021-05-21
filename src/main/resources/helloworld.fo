@@ -26,7 +26,7 @@
         </rdf:RDF>
       </x:xmpmeta>
     <pdf:embedded-file filename="logo.jpg" src="url(file:///home/anandikarunaratne/Work/performanceEval/Library/Attachments/logo.jpg)" description="Java Logo"/>
-    <pdf:embedded-file src="url(file:///home/anandikarunaratne/Work/performanceEval/Library/Attachments/mustangXmlFile.xml)"/>
+    <pdf:embedded-file src="url(file:///home/anandikarunaratne/Work/performanceEval/Library/Attachments/factur-x.xml)"/>
   </fo:declarations>
 
   <fo:page-sequence master-reference="simpleA4">
