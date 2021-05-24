@@ -13,7 +13,7 @@ public class MustangPDFA3Session implements PDFA3Session {
 	
 	IZUGFeRDExporter ze;
 	private String PDF_A1_FILE, XML_FILE;
-	private final String OUTPUT_FILE = "mustangA3File.pdf";
+	private final String OUTPUT_FILE = "Outputs/mustangA3File.pdf";
 
 	public void addAttachment() throws IOException, SAXException {
 

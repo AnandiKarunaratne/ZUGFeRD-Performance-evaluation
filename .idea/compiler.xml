@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="performance-eval" target="1.8" />
+      <module name="performance-eval" target="9" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -21,7 +21,7 @@ public class FopPDFA3Session implements PDFA3Session {
 	private static String FOP_FO_FILE;
 	private static String CONFIG_PROPERTIES;
 	private static String FOP_XCONF;
-	private static final String OUTPUT_FILE = "fopA3File.pdf";
+	private static final String OUTPUT_FILE = "Outputs/fopA3File.pdf";
 
 
 	public void addAttachment() {
