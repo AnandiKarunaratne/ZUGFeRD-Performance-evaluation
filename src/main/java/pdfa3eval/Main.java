@@ -11,14 +11,10 @@ public class Main {
 //		PDFA3Session mustangPDFA3Session = PDFA3Factory.getPDFSession(Type.MUSTANG);
 //		mustangPDFA3Session.addAttachment();
 //		mustangPDFA3Session.generate();
-		try {
-			PDFA3Session fopPDFA3Session = PDFA3Factory.getPDFSession(Type.FOP);
-			fopPDFA3Session.addAttachment();
-			fopPDFA3Session.generate();
-		} catch (NullPointerException e) {
-			System.out.println(e.getMessage());
-		}
 
+		PDFA3Session fopPDFA3Session = PDFA3Factory.getPDFSession(Type.FOP);
+		fopPDFA3Session.addAttachment();
+		fopPDFA3Session.generate();
 	}
 
 }

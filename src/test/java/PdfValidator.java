@@ -22,18 +22,14 @@ public class PdfValidator {
 
 	@Test
 	public void zugferdFopVal() throws IOException, SAXException, Exception {
-		try{
-			String OUTPUT_FILE = "fopA3File.pdf";
+		String OUTPUT_FILE = "fopA3File.pdf";
 
-			PDFA3Session fopPDFA3Session = PDFA3Factory.getPDFSession(PDFA3Factory.Type.FOP);
-			fopPDFA3Session.addAttachment();
-			fopPDFA3Session.generate();
+		PDFA3Session fopPDFA3Session = PDFA3Factory.getPDFSession(PDFA3Factory.Type.FOP);
+		fopPDFA3Session.addAttachment();
+		fopPDFA3Session.generate();
 
-			ZUGFeRDValidator zfv = new ZUGFeRDValidator();
-			System.out.println(zfv.validate(OUTPUT_FILE));
-		} catch (AssertionError e){
-			System.out.println(e.getMessage());
-		}
+		ZUGFeRDValidator zfv = new ZUGFeRDValidator();
+		System.out.println(zfv.validate(OUTPUT_FILE));
 
 	}
 
