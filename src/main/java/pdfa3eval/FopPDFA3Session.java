@@ -1,23 +1,19 @@
 package pdfa3eval;
 
-import java.io.*;
-import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import javax.xml.transform.Result;
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.sax.SAXResult;
-import javax.xml.transform.stream.StreamSource;
-
 import org.apache.fop.apps.FOUserAgent;
 import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopFactory;
 import org.apache.xmlgraphics.util.MimeConstants;
 import org.xml.sax.SAXException;
+
+import javax.xml.transform.*;
+import javax.xml.transform.sax.SAXResult;
+import javax.xml.transform.stream.StreamSource;
+import java.io.*;
+import java.util.Objects;
+import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class FopPDFA3Session implements PDFA3Session {
 
@@ -28,7 +24,7 @@ public class FopPDFA3Session implements PDFA3Session {
 	private static final String OUTPUT_FILE = "fopA3File.pdf";
 
 
-	public void addAttachment() throws IOException, SAXException {
+	public void addAttachment() {
 		/*
 		FO file is considered instead of xml and xslt style sheet.
 		xml + xslt --> fo
@@ -42,15 +38,15 @@ public class FopPDFA3Session implements PDFA3Session {
 	public void generate() throws IOException, SAXException {
 
 		ClassLoader classLoader = FopPDFA3Session.class.getClassLoader();
-		File configFile = new File(classLoader.getResource(FOP_XCONF).getFile());
+		File configFile = new File(Objects.requireNonNull(classLoader.getResource(FOP_XCONF)).getFile());
 			
 		Properties prop = new Properties();
-		InputStream is = new FileInputStream(classLoader.getResource(CONFIG_PROPERTIES).getFile());
+		InputStream is = new FileInputStream(Objects.requireNonNull(classLoader.getResource(CONFIG_PROPERTIES)).getFile());
 		prop.load(is);
 			
 		FopFactory fopFactory = FopFactory.newInstance(configFile);
 		String outputFile = prop.getProperty("OUTPUT_PATH") + File.separator + OUTPUT_FILE;
-		OutputStream out = new BufferedOutputStream(new FileOutputStream(new File(outputFile)));
+		OutputStream out = new BufferedOutputStream(new FileOutputStream(outputFile));
 			
 		FOUserAgent foUserAgent = fopFactory.newFOUserAgent();
 		foUserAgent.setAccessibility(true);
@@ -63,7 +59,7 @@ public class FopPDFA3Session implements PDFA3Session {
 
 			TransformerFactory factory = TransformerFactory.newInstance();
 			Transformer transformer = factory.newTransformer();
-			Source src = new StreamSource(classLoader.getResource(FOP_FO_FILE).getFile());
+			Source src = new StreamSource(Objects.requireNonNull(classLoader.getResource(FOP_FO_FILE)).getFile());
 			Result res = new SAXResult(fop.getDefaultHandler());
 			transformer.transform(src, res);
 
